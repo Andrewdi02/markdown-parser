@@ -20,6 +20,9 @@ public class MarkdownParse {
             if (markdown.indexOf("[", closeParen) == -1){
                 break;
             }
+            else if (markdown.indexOf("]") == -1){
+                break;
+            }
             currentIndex = closeParen + 1;
         }
 
