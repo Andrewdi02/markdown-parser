@@ -16,6 +16,11 @@ public class MarkdownParse {
             if (openBracket == -1){
                 break;
             }
+            if (openBracket != 0){
+                if (markdown.substring(openBracket - 1, openBracket).equals("!")){
+                    break;
+                }
+            }
             int closeBracket = markdown.indexOf("]", openBracket);
             if (closeBracket == -1){
                 break;
